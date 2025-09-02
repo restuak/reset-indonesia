@@ -7,12 +7,12 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { timeline } from "@/data/timeline";
-import { cn } from "@/lib/utils"; 
 import ScrollUpAndHome from "@/components/scrollup";
 
-export default function Linimasa() {
+export default function LinimasaPage() {
   return (
-    <section className="min-h-screen bg-black text-foreground px-4 py-16 pb-32">
+    <section className="min-h-screen bg-black text-white px-4 py-16 pb-32">
+
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,6 +22,7 @@ export default function Linimasa() {
         Linimasa <span className="text-herogreen">#ResetIndonesia</span>
       </motion.h1>
 
+      {/* Timeline */}
       <VerticalTimeline>
         {timeline.map((item, idx) => (
           <VerticalTimelineElement
@@ -33,10 +34,9 @@ export default function Linimasa() {
               borderRadius: "1rem",
               boxShadow: "0 4px 14px rgba(0,0,0,0.3)",
             }}
-            contentArrowStyle={{ borderRight: "7px solid var(--bravepink)" }}
+            contentArrowStyle={{ borderRight: "7px solid #ff66b3" }}
             iconStyle={{
-              background:
-                idx % 2 === 0 ? "var(--bravepink)" : "var(--herogreen)",
+              background: idx % 2 === 0 ? "#ff66b3" : "#1b602f",
               color: "#fff",
             }}
           >
@@ -47,10 +47,9 @@ export default function Linimasa() {
               viewport={{ once: true }}
             >
               <h3
-                className={cn(
-                  "text-lg md:text-xl font-semibold mb-2 uppercase",
+                className={`text-lg md:text-xl font-semibold mb-2 uppercase ${
                   idx % 2 === 0 ? "text-bravepink" : "text-herogreen"
-                )}
+                }`}
               >
                 {item.event}
               </h3>

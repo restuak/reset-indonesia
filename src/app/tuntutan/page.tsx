@@ -2,12 +2,11 @@
 
 import ScrollUpAndHome from "@/components/scrollup";
 
-export default function RakyatMenuntutPage() {
-
+export default function RakyatMenuntut() {
 
   return (
     <div className="w-screen min-h-screen bg-black relative pb-32">
-      {/* Container scrollable */}
+
       <div className="">
         <iframe
           src="https://rakyatmenuntut.net/"
