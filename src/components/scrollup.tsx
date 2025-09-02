@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaArrowLeft, FaHome } from "react-icons/fa";
 
 export default function ScrollUpAndHome() {
   const [show, setShow] = useState(false);
@@ -29,8 +29,8 @@ export default function ScrollUpAndHome() {
 
   return (
     <div
-      className={`fixed left-1/2 transform -translate-x-1/2 bottom-4 flex flex-col items-center gap-3 transition-opacity duration-300  ${
-        show ? "opacity-100" : "opacity-40 "
+      className={`fixed left-1/2 transform -translate-x-1/2 bottom-4 flex flex-col items-center gap-3 transition-opacity duration-300 ${
+        show ? "opacity-100" : "opacity-40"
       }`}
     >
       {/* Scroll Up Button */}
@@ -42,13 +42,24 @@ export default function ScrollUpAndHome() {
         <FaArrowUp />
       </button>
 
-      {/* Back to Home Button */}
-      <button
-        onClick={() => router.push("/")}
-        className="bg-herogreen text-white px-6 py-2 rounded-lg shadow-lg hover:bg-neutral-800  transition cursor-pointer uppercase"
-      >
-        Back to Home
-      </button>
+      {/* Navigation Buttons */}
+      <div className="flex gap-3">
+        {/* Back Button */}
+        <button
+          onClick={() => router.back()}
+          className="bg-herogreen text-white px-6 py-2 rounded-lg shadow-lg hover:bg-neutral-800 transition cursor-pointer uppercase flex items-center gap-2"
+        >
+          <FaArrowLeft /> Back
+        </button>
+
+        {/* Home Button */}
+        <button
+          onClick={() => router.push("/")}
+          className="bg-herogreen text-white px-6 py-2 rounded-lg shadow-lg hover:bg-neutral-800 transition cursor-pointer uppercase flex items-center gap-2"
+        >
+          <FaHome /> Home
+        </button>
+      </div>
     </div>
   );
 }

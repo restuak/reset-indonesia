@@ -9,7 +9,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 export const metadata: Metadata = {
-  title: "Reset Indonesia",
+  title: "RESET INDONESIA | Transparansi. Reformasi. Empati.",
   description: "Website Reset Indonesia",
 };
 
