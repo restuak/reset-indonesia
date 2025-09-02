@@ -10,100 +10,90 @@ export default function Home() {
     {
       label: "TUNTUTAN",
       link: "/tuntutan",
-      bg: "bg-bravepink/90",
-      hover: "hover:bg-bravepink/70 hover:text-white",
-      text: "text-white",
+      bg: "bg-bravepink",
+      hover: "hover:bg-bravepink hover:text-white",
+      text: "text-herogreen",
     },
     {
-      label: "TIMELINE",
-      link: "/timeline",
-      bg: "bg-herogreen/90",
-      hover: "hover:bg-herogreen/70 hover:text-white",
-      text: "text-white",
+      label: "LINIMASA",
+      link: "/linimasa",
+      bg: "bg-herogreen",
+      hover: "hover:bg-herogreen hover:text-white",
+      text: "text-bravepink",
     },
     {
-      label: "RIP",
+      label: "RIP 🥀",
       link: "/rip",
-      bg: "bg-bravepink/90",
-      hover: "hover:bg-bravepink/70 hover:text-white",
-      text: "text-white",
+      bg: "bg-bravepink",
+      hover: "hover:bg-bravepink hover:text-white",
+      text: "text-herogreen",
     },
     {
-      label: "RAKYAT BERSATU",
-      link: "/rakyatbersatu",
-      bg: "bg-herogreen/90",
-      hover: "hover:bg-herogreen/70 hover:text-white",
-      text: "text-white",
+      label: "RAKYAT JELITA",
+      link: "/rakyatjelita",
+      bg: "bg-herogreen",
+      hover: "hover:bg-herogreen hover:text-white",
+      text: "text-bravepink",
     },
   ];
 
+ 
+
   return (
     <main className="relative min-h-screen w-screen text-white overflow-hidden">
-      {/* Fixed fullscreen background */}
+      {/* Background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: "url('/web.webp')" }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       {/* Hero Section */}
       <section className="h-screen flex flex-col items-center justify-center text-center px-6">
         <motion.h2
-          className="uppercase text-sm md:text-lg tracking-widest text-bravepink mb-6"
+          className="uppercase text-sm md:text-3xl tracking-widest text-bravepink mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Selamat Datang di
+          Transparansi | Reformasi | Empati
         </motion.h2>
 
         <motion.h1
           className="text-4xl md:text-7xl font-extrabold drop-shadow-lg mb-8 text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          RESET <span className="text-herogreen">INDONESIA</span>
+          RESET <span className="">INDONESIA</span>
         </motion.h1>
 
         <motion.p
-          className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-14 text-gray-200"
+          className="max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-14 text-gray-200"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Saatnya kita menekan tombol reset, bukan hanya untuk merubah arah
-          bangsa ini, tapi juga untuk menghapus error lama, membuang file korup,
-          dan menginstal ulang masa depan Indonesia yang lebih adil, bersih, dan
+          Untuk masa depan Indonesia yang lebih adil, bersih, dan
           berdaulat.
         </motion.p>
 
         {/* Menu Buttons */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.2 },
-            },
-          }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 rounded-xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
           {buttons.map((btn, i) => (
-            <motion.button
+            <button
               key={i}
               onClick={() => router.push(btn.link)}
-              className={`${btn.bg} ${btn.text} px-6 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 ${btn.hover}`}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              className={`${btn.bg} ${btn.text} px-6 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer ${btn.hover}`}
             >
               {btn.label}
-            </motion.button>
+            </button>
           ))}
         </motion.div>
       </section>
