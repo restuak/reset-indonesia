@@ -1,4 +1,4 @@
-import BravePinkPic from "@/components/rakyatjelita/BravePinkPic";
+import BravePinkPic from "@/view/rakyatjelita/BravePinkPic";
 
 export default function BravePink() {
   return (
