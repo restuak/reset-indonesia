@@ -6,12 +6,11 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 import { timeline } from "@/data/timeline";
 import { cn } from "@/lib/utils"; 
 import ScrollUpAndHome from "@/components/scrollup";
 
-export default function TimelinePage() {
+export default function Linimasa() {
   return (
     <section className="min-h-screen bg-black text-foreground px-4 py-16 pb-32">
       <motion.h1

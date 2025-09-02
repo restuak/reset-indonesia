@@ -5,7 +5,7 @@ import Bunga from "@/components/rip/bunga";
 import AudioPlayer from "@/components/rip/audio";
 import ScrollUpAndHome from "@/components/scrollup";
 
-export default function RIPPage() {
+export default function RIP() {
   return (
     <div className="w-screen min-h-screen bg-black text-white relative overflow-hidden pb-24">
       {/* Efek bunga */}
