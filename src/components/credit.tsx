@@ -10,10 +10,21 @@ interface CreditModalProps {
 }
 
 export default function Credit({ isOpen, onClose }: CreditModalProps) {
+  const thanksTo = [
+    { label: "rakyatmenuntut", url: "https://rakyatmenuntut.net" },
+    { label: "pinkijo.app", url: "https://pinkijo.vercel.app" },
+    {
+      label: "brave-pink-hero-green",
+      url: "https://brave-pink-hero-green.lovable.app",
+    },
+    { label: "resetindonesia", url: "https://resetindonesia.com" },
+    // { label: "bijakmemantau", url: "https://bijakmemantau.id/tuntutan-178" },
+    { label: "@mantapfunny", url: "https://www.instagram.com/mantapfunny" },
+  ];
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
-        {/* Background transparan */}
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -38,7 +49,6 @@ export default function Credit({ isOpen, onClose }: CreditModalProps) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-black/50 p-6 text-left align-middle shadow-xl transition-all border border-white/20 backdrop-blur-sm">
-                {/* Title di tengah */}
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-bold text-bravepink mb-6 text-center"
@@ -47,15 +57,14 @@ export default function Credit({ isOpen, onClose }: CreditModalProps) {
                 </Dialog.Title>
 
                 <div className="space-y-4 text-white text-sm">
-                  {/* Penyusun web */}
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4 text-bravepink" />
+                  <div className="flex items-center gap-2 ">
+                    <User className="w-4 h-4 text-bravepink " />
                     <span>
                       Developer:{" "}
                       <a
                         href="https://www.instagram.com/restu.aka/"
                         target="_blank"
-                        className="text-bravepink hover:underline"
+                        className="text-bravepink hover:underline "
                       >
                         Restu Aka 🪐
                       </a>
@@ -63,9 +72,8 @@ export default function Credit({ isOpen, onClose }: CreditModalProps) {
                     </span>
                   </div>
 
-                  {/* Repo */}
                   <div className="flex items-center gap-2">
-                    <Github className="w-4 h-4 text-bravepink" />
+                    <Github className="w-4 h-4 text-bravepink " />
                     <span>
                       Repository:{" "}
                       <a
@@ -75,33 +83,29 @@ export default function Credit({ isOpen, onClose }: CreditModalProps) {
                       >
                         GitHub
                       </a>
+                      <span> (bebas pull-req)</span>
                     </span>
                   </div>
 
-                  {/* Terimakasih */}
-                  <p className="mt-3 font-semibold flex items-center gap-2">
+                  <p className="mt-3  flex items-center gap-2">
                     <HeartHandshake className="w-4 h-4 text-bravepink" />
                     Thanks to:
                   </p>
                   <ul className="list-disc list-inside space-y-1 pl-2">
-                    {[
-                      "rakyatmenuntut.net",
-                      "pinkijo.vercel.app",
-                      "brave-pink-hero-green.lovable.app",
-                      "resetindonesia.com",
-                      "@mantapfunny (IG)",
-                    ].map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="text-bravepink hover:text-white cursor-pointer transition"
-                      >
-                        {item}
+                    {thanksTo.map((item, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          className="text-bravepink hover:text-white hover:underline transition"
+                        >
+                          {item.label}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Tombol Tutup di tengah */}
                 <div className="mt-6 flex justify-center">
                   <button
                     type="button"

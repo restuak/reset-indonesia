@@ -28,8 +28,8 @@ export default function LinimasaPage() {
           transition={{ duration: 2 }}
           className="fixed right-[17%] md:right-[27%] top-5 justify-center items-center text-center  bg-bravepink text-white px-4 py-2 rounded-lg shadow-lg z-50"
         >
-          Halaman ini masih perlu dikembangkan, karena saya kekurangan bahan
-          data riset yang mendalam. Kedepan akan disempurnakan
+          Halaman ini masih perlu dikembangkan, karena kekurangan bahan
+          data riset yang mendalam. Kedepan akan disempurnakan. Terima kasih.
         </motion.div>
       )}
 

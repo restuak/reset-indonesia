@@ -32,6 +32,14 @@ export default function Home() {
       text: "text-white",
       img: "/img/prev/prev3.webp",
     },
+    // {
+    //   label: "BIJAK MEMANTAU",
+    //   sublabel: "Pantau 17+8 tuntutan rakyat di sini",
+    //   link: "https://bijakmemantau.id/tuntutan-178",
+    //   bg: "bg-neutral-800",
+    //   text: "text-white",
+    //   img: "/img/prev/prev4.webp",
+    // },
   ];
 
   return (

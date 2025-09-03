@@ -62,7 +62,7 @@ export default function ScrollUpAndHome() {
         {/* Kredit Button */}
         <button
           onClick={() => setIsCreditOpen(true)}
-          className="bg-bravepink text-herogreen px-1 py-0.5 md:px-2 md:py-0.5 rounded-lg shadow-lg hover:bg-neutral-800 transition cursor-pointer uppercase text-[8px] md:text-2xs"
+          className="bg-neutral-600 text-bravepink px-1 py-0.5 md:px-2 md:py-0.5 rounded-lg shadow-lg hover:bg-neutral-800 transition cursor-pointer uppercase text-[8px] md:text-2xs"
         >
           credit
         </button>
