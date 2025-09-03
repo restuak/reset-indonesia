@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -10,8 +11,28 @@ import { timeline } from "@/data/timeline";
 import ScrollUpAndHome from "@/components/scrollup";
 
 export default function LinimasaPage() {
+  const [showAlert, setShowAlert] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowAlert(false), 3000); 
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="min-h-screen bg-black text-white px-4 py-16 pb-32">
+      {showAlert && (
+        <motion.div
+          initial={{ opacity: 1, x: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 1, x: 30 }}
+          transition={{ duration: 2 }}
+          className="fixed right-[17%] md:right-[27%] top-5 justify-center items-center text-center  bg-bravepink text-white px-4 py-2 rounded-lg shadow-lg z-50"
+        >
+          Halaman ini masih perlu dikembangkan, karena saya kekurangan bahan
+          data riset yang mendalam. Kedepan akan disempurnakan
+        </motion.div>
+      )}
+
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
