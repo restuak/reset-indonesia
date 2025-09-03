@@ -52,7 +52,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Beberapa website applikasi kreasi dalam merespon gerakan #ResetIndonesia
+        Beberapa website/applikasi kreasi teman-teman dalam merespon gerakan #ResetIndonesia
       </motion.h1>
 
       {/* Card */}
@@ -90,7 +90,7 @@ export default function Home() {
         ))}
       </motion.div>
       <motion.h1
-        className="container text-center text-neutral-800 text-md md:text-2xl pt-15 pb-5 font-normal mb-12 "
+        className="container text-center text-neutral-800 text-md md:text-2xl pt-15 pb-25 font-normal mb-12 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

@@ -23,7 +23,7 @@ export default function LoadingPage() {
       
 
       <motion.h1
-        className="text-bravepink text-3xl md:text-8xl font-bold font-roboto uppercase"
+        className="text-bravepink text-4xl md:text-8xl font-bold font-roboto uppercase"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}

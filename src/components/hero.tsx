@@ -61,7 +61,7 @@ export default function HomePage() {
         </motion.h2>
 
         <motion.h1
-          className="text-4xl md:text-7xl font-extrabold drop-shadow-lg mb-8 text-white"
+          className="text-6xl md:text-7xl font-extrabold drop-shadow-lg mb-8 text-white"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
