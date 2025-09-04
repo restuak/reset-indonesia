@@ -10,30 +10,30 @@ export default function HomePage() {
     {
       label: "TUNTUTAN",
       link: "/tuntutan",
-      bg: "bg-bravepink",
-      hover: "hover:bg-bravepink hover:text-white",
+      bg: "bg-white/70",
+      hover: "hover:bg-white/0 hover:text-white",
       text: "text-herogreen",
     },
     {
-      label: "LINIMASA",
+      label: "LINI MASA",
       link: "/linimasa",
-      bg: "bg-herogreen",
-      hover: "hover:bg-herogreen hover:text-white",
-      text: "text-bravepink",
+      bg: "bg-white/70",
+      hover: "hover:bg-white/0 hover:text-white",
+      text: "text-herogreen",
     },
     {
-      label: "RIP 🥀",
+      label: "GUGUR 🥀",
       link: "/rip",
-      bg: "bg-bravepink",
-      hover: "hover:bg-bravepink hover:text-white",
+      bg: "bg-white/70",
+      hover: "hover:bg-white/0 hover:text-white",
       text: "text-herogreen",
     },
     {
       label: "RAKYAT JELITA",
       link: "/rakyatjelita",
-      bg: "bg-herogreen",
-      hover: "hover:bg-herogreen hover:text-white",
-      text: "text-bravepink",
+      bg: "bg-white/70",
+      hover: "hover:bg-white/0 hover:text-white",
+      text: "text-herogreen",
     },
   ];
 
@@ -66,17 +66,22 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          RESET <span className="">INDONESIA</span>
+          RESET INDONESIA
         </motion.h1>
 
         <motion.p
-          className="max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-14 text-gray-200"
+          className="max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-14 text-white/90"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          Untuk masa depan Indonesia yang lebih adil, bersih, dan
-          berdaulat.
+          Arsip digital rangkuman tuntutan rakyat, linimasa peristiwa penting,
+          kreasi masyarakat di dunia maya, serta mengenang mereka yang telah
+          gugur demi keadilan dan perubahan di Indonesia.
+          <br></br>
+          <span className="font-extrabold text-lg md:text-xl text-bravepink hover:text-white/90 transition-colors duration-300">
+            #ResetIndonesia
+          </span>
         </motion.p>
 
         {/* Menu Buttons */}
@@ -90,7 +95,7 @@ export default function HomePage() {
             <button
               key={i}
               onClick={() => router.push(btn.link)}
-              className={`${btn.bg} ${btn.text} px-6 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer ${btn.hover}`}
+              className={`${btn.bg} ${btn.text} px-2 py-2 md:px-4 md:py-3 border-t-white  border-6 opacity-570 amber-50 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer ${btn.hover}`}
             >
               {btn.label}
             </button>

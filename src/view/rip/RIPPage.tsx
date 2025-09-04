@@ -42,14 +42,14 @@ export default function RIPPage() {
           {paraKorban.map((victim, i) => (
             <div
               key={i}
-              className="bg-herogreen p-6 rounded-2xl shadow-2xl border border-white/20 flex flex-col items-center text-center transition hover:brightness-125"
+              className="bg-white/10 bg-opacity-40 border-t-white  border-b-white border-4 p-6 rounded-2xl shadow-2xl border-white/20 flex flex-col items-center text-center transition hover:brightness-150"
             >
               {/* Foto korban */}
               {victim.foto ? (
                 <img
                   src={victim.foto}
                   alt={victim.name}
-                  className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-bravepink"
+                  className="w-32 h-32 rounded-full object-cover mb-4 border-4 text-herogreen border-bravepink"
                 />
               ) : (
                 <div className="w-32 h-32 rounded-full bg-gray-700 mb-4 flex items-center justify-center text-2xl border-2 border-bravepink">
@@ -65,7 +65,7 @@ export default function RIPPage() {
                 {victim.date} | Usia: {victim.age} tahun
               </p>
               <p className="text-white/50 text-sm mb-1">{victim.address}</p>
-              <p className="text-bravepink text-sm mb-2">
+              <p className="text-herogreen text-sm mb-2">
                 {victim.affiliation}
               </p>
               <p className="text-white text-sm">{victim.details}</p>

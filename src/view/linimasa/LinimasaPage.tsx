@@ -39,7 +39,7 @@ export default function LinimasaPage() {
         transition={{ duration: 0.7 }}
         className="text-center text-bravepink text-4xl md:text-6xl pb-5 pt-8 font-bold mb-12 uppercase"
       >
-        Linimasa <span className="text-herogreen">#ResetIndonesia</span>
+        Lini Masa <span className="text-herogreen">#ResetIndonesia</span>
       </motion.h1>
 
       {/* Timeline */}

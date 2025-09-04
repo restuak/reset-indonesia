@@ -59,7 +59,7 @@ export default function ScrollUpAndHome() {
             <FaHome /> Home
           </button>
         </div>
-        {/* Kredit Button */}
+       
         <button
           onClick={() => setIsCreditOpen(true)}
           className="bg-neutral-600 text-bravepink px-1 py-0.5 md:px-2 md:py-0.5 rounded-lg shadow-lg hover:bg-neutral-800 transition cursor-pointer uppercase text-[8px] md:text-2xs"
@@ -68,7 +68,7 @@ export default function ScrollUpAndHome() {
         </button>
       </div>
 
-      {/* Modal Kredit */}
+      
       <Credit isOpen={isCreditOpen} onClose={() => setIsCreditOpen(false)} />
     </>
   );

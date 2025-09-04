@@ -1,4 +1,4 @@
-import HomePage from "@/components/hero";
+import HomePage from "@/view/home/Hero";
 import LoadingPage from "@/components/loading";
 
 export default function Home() {
